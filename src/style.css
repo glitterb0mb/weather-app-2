@@ -1,11 +1,11 @@
 body {
   font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 
 h1 {
   color: #878787;
   font-size: 25px;
-  font-weight: 100;
   line-height: 30px;
   margin-bottom: 0;
 }
@@ -21,9 +21,8 @@ li {
   padding: 0;
 
   color: #1f0442;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 li:first-letter {
@@ -55,7 +54,6 @@ li:first-letter {
   color: #301b3f;
   font-size: 64px;
   line-height: 1;
-  font-weight: 400;
 }
 
 .weather-temperature .units {
