@@ -54,6 +54,8 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function showFahrTemp (event)
+
 function search(city) {
   let apiKey = "accd6b75554184ea54b4d2360ba258b0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
