@@ -165,9 +165,6 @@ function getCurrentLocation(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#current-location-btn");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
 let fahrenheitTemp = null;
 
 searchCity("Atlanta");
