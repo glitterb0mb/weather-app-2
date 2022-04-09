@@ -1,27 +1,3 @@
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
-}
-
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-function search(city) {
- let apiKey = "accd6b75554184ea54b4d2360ba258b0";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayTemperature);
-}
-
-search ("Atlanta");
-
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -109,3 +85,24 @@ function displayForecast(){
 }
 
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+function search(city) {
+ let apiKey = "accd6b75554184ea54b4d2360ba258b0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+search ("Atlanta");
