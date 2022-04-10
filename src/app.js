@@ -113,8 +113,8 @@ function getForecast(coordinates) {
 }
 
 function showTemperature(response) {
-  document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".temperature").innerHTML = Math.round(
+  document.querySelector("city").innerHTML = response.data.name;
+  document.querySelector("temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
